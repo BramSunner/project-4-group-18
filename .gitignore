@@ -4,6 +4,9 @@ api_keys.py
 # Movie ID List for TMDB.
 movie_ids_09_23_2024.json
 
+# DS_Store.
+.DS_Store
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
