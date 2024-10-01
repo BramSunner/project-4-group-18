@@ -1,11 +1,3 @@
-# ... // what it doooo babey
-
-
-# perform check on inputted user movie
-# if exists, use that as target,
-# if not, movie_processor will take care of it and get us a row
-
-
 # Dependencies.
 # Data.
 import pandas as pd
