@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Entertain Pro</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet" >
+	<link href="css/font-awesome.min.css" rel="stylesheet" >
+	<link href="css/global.css" rel="stylesheet">
+	<link href="css/event.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+	<script src="js/bootstrap.bundle.min.js"></script>
+
+</head>
+<body>
+<section id="header">
+<div id="signup-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-dialog">
+				<div class="modal-content">
+				   <div class="modal-header">
+				<h5 class="modal-title" id="exampleModalLabel">SIGN UP</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			  </div>
+					<div class="modal-body">
+						
+						<form class="ps-3 pe-3" action="#">
+							<div class="mb-3">
+								<label for="username" class="form-label">Name</label>
+								<input class="form-control" type="email" id="username" required="" placeholder="Eget Nulla">
+							</div>
+							 
+							<div class="mb-3">
+								<label for="emailaddress" class="form-label">Email address</label>
+								<input class="form-control" type="email" id="emailaddress" required="" placeholder="info@gmail.com">
+							</div>
+							 
+							<div class="mb-3">
+								<label for="password" class="form-label">Password</label>
+								<input class="form-control" type="password" required="" id="password" placeholder="Enter your password">
+							</div>
+							 
+							<div class="mb-3">
+								<div class="form-check">
+									<input type="checkbox" class="form-check-input" id="customCheck1">
+									<label class="form-check-label" for="customCheck1">I accept <a href="#">Terms and Conditions</a></label>
+								</div> 
+							</div>
+							 
+							<div class="mb-3 text-center">
+							 <h6><a class="button_1 d-block" href="#">LOG IN</a></h6>
+							</div>
+						 
+						</form>
+					 
+					</div>
+				</div><!-- /.modal-content -->
+			</div><!-- /.modal-dialog -->
+		</div>
+<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-4 p-0 fw-bold text-white text-uppercase" href="index.html"><i class="fa fa-video-camera me-1 col_light fs-1 align-middle"></i> Entertain Pro</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mb-0">
+	    
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="index.html">Home</a>
+        </li>
+		<li class="nav-item">
+          <a class="nav-link" href="about.html">About </a>
+        </li>
+		
+		<li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Blog
+          </a>
+          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="blog.html"> Blog</a></li>
+            <li><a class="dropdown-item border-0" href="blog_detail.html"> Blog Detail</a></li>
+          </ul>
+        </li>
+		
+		<li class="nav-item">
+          <a class="nav-link active" href="event.html">Events</a>
+        </li>
+		
+		<li class="nav-item">
+          <a class="nav-link" href="team.html">team</a>
+        </li>
+				
+		<li class="nav-item">
+          <a class="nav-link" href="contact.html">Contact</a>
+        </li>
+		
+      </ul>
+	  <ul class="navbar-nav mb-0 ms-auto">
+	    
+        <li class="nav-item">
+            <select name="categories" class="form-select bg-light" required="">
+			<option value="">All Categories</option>
+			<option>Movie</option>
+			<option>Video</option>
+			<option>Tv-Show</option>
+			<option>Music</option>
+			</select>
+			
+			<div class="input-group">
+				<input type="text" class="form-control border-start-0" placeholder="Search Movie">
+				<span class="input-group-btn">
+					<button class="btn btn-primary bg_yell" type="button">
+						<i class="fa fa-search"></i> </button>
+				</span>
+		</div>
+        </li>
+	
+		<li class="nav-item ms-3">
+          <a class="nav-link button" data-bs-toggle="modal" data-bs-target="#signup-modal" href="#">SIGN UP</a>
+        </li>
+		<!-- /.modal -->
+		
+      </ul>
+    </div>
+  </div>
+</nav>
+</section>
+
+<section id="center" class="center_o pt-5">
+ <div class="container">
+   <div class="row center_o1 text-center">
+    <div class="col-md-12">
+	  <h2>EVENTS</h2>
+	  <h5 class="bg_dark d-inline-block p-4 mb-0 mt-4 pt-2 pb-2 fw-normal col_red"><a class="text-white" href="#">Home</a>  <span class="me-2 ms-2 text-muted"> /</span>   Events</h5>
+	</div>
+   </div>
+  </div>
+</section>
+
+<section id="event" class="p_3 bg-light">
+ <div class="container">
+   <div class="row upcome_1 text-center">
+   <div class="col-md-12">
+     <h3 class="mb-0">UPCOMING EVENTS</h3>
+	 <hr class="line me-auto ms-auto">
+   </div>
+  </div>
+   <div class="row event1 mt-3">
+     <div class="col-md-6 pe-0">
+	  <div class="event1l">
+	    <div class="grid clearfix">
+				  <figure class="effect-jazz mb-0">
+					<a href="#"><img src="img/14.jpg" height="428" class="w-100" alt="abc"></a>
+				  </figure>
+			  </div>
+	  </div>
+	 </div>
+	 <div class="col-md-6 ps-0">
+	  <div class="event1r bg-white p-4 shadow_box">
+	     <h5 class="text-uppercase"><a href="#">Music Event in India</a></h5>
+		  <h6>Delhi &amp; Mumbai 
+			 <span class="col_red pull-right">
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star-o"></i>
+				</span>
+			 </h6>
+			 <hr>
+			 <h6>June 09 - July 06 <span class="pull-right">09:00-13:00 pm</span></h6>
+			 <p class="mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiud tempor incididunt ut labore et dolore magna aliqua. Ut enim ad quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo is aute irure dolor in reprehenderit in voluptate velit esse cillum fugiat nulla pariatur Excepteur sint. Read More</p>
+			 <ul class="mt-4 mb-0">  
+			  <li class="text-center d-inline-block fw-normal me-3"><span class="d-inline-block bg_red text-white rounded-circle fs-2 mb-2">55</span> <br> Days</li>
+			 <li class="text-center d-inline-block fw-normal me-3"><span class="d-inline-block bg_red text-white rounded-circle fs-2 mb-2">18</span> <br> Hours</li>
+			  <li class="text-center d-inline-block fw-normal me-3"><span class="d-inline-block bg_red text-white rounded-circle fs-2 mb-2">15</span> <br> Mins</li>
+			 <li class="text-center d-inline-block fw-normal"><span class="d-inline-block bg_red text-white rounded-circle fs-2 mb-2">23</span> <br> Secs</li>
+			 </ul>
+	  </div>
+	 </div>
+   </div>
+  </div>
+</section>
+
+<section id="events" class="p_3 pb-5">
+ <div class="container-xl">
+  <div class="row upcome_1 text-center">
+   <div class="col-md-12">
+     <h3 class="mb-0">FEATURED EVENTS</h3>
+	 <hr class="line me-auto ms-auto">
+   </div>
+  </div>
+  <div class="row events_1 mt-3">
+   <div id="carouselExampleCaptions3" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions3" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item">
+       <div class="events_1i row">
+	    <div class="col-md-4">
+		 <div class="events_1i1 clearfix position-relative">
+		  <div class="events_1i1i clearfix">
+		    <img src="img/19.jpg" alt="abc" class="w-100">
+		  </div>
+		  <div class="events_1i1i1 clearfix position-absolute bottom-0 text-center w-100">
+		    <h6 class="mb-0"><a class="button_1" href="#">Book Now </a></h6>
+		  </div>
+		 </div>
+		 <div class="events_1i2 clearfix p-3 pt-4 pb-4 bg-light">
+		  <h5 class="text-uppercase"><a href="#">Music Event in India</a></h5>
+		  <h6>Delhi &amp; Mumbai 
+			 <span class="col_red pull-right">
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star-o"></i>
+				</span>
+			 </h6>
+			 <hr>
+			 <h6 class="mb-0">June 09 - July 06 <span class="pull-right">09:00-13:00 pm</span></h6>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="events_1i1 clearfix position-relative">
+		  <div class="events_1i1i clearfix">
+		    <img src="img/20.jpg" alt="abc" class="w-100">
+		  </div>
+		  <div class="events_1i1i1 clearfix position-absolute bottom-0 text-center w-100">
+		    <h6 class="mb-0"><a class="button_1" href="#">Book Now </a></h6>
+		  </div>
+		 </div>
+		 <div class="events_1i2 clearfix p-3 pt-4 pb-4 bg-light">
+		  <h5 class="text-uppercase"><a href="#">Music Event in India</a></h5>
+		  <h6>Delhi &amp; Mumbai 
+			 <span class="col_red pull-right">
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star-o"></i>
+				</span>
+			 </h6>
+			 <hr>
+			 <h6 class="mb-0">June 09 - July 06 <span class="pull-right">09:00-13:00 pm</span></h6>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="events_1i1 clearfix position-relative">
+		  <div class="events_1i1i clearfix">
+		    <img src="img/21.jpg" alt="abc" class="w-100">
+		  </div>
+		  <div class="events_1i1i1 clearfix position-absolute bottom-0 text-center w-100">
+		    <h6 class="mb-0"><a class="button_1" href="#">Book Now </a></h6>
+		  </div>
+		 </div>
+		 <div class="events_1i2 clearfix p-3 pt-4 pb-4 bg-light">
+		  <h5 class="text-uppercase"><a href="#">Music Event in India</a></h5>
+		  <h6>Delhi &amp; Mumbai 
+			 <span class="col_red pull-right">
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star-o"></i>
+				</span>
+			 </h6>
+			 <hr>
+			 <h6 class="mb-0">June 09 - July 06 <span class="pull-right">09:00-13:00 pm</span></h6>
+		 </div>
+		</div>
+	   </div>
+    </div>
+    <div class="carousel-item active">
+        <div class="events_1i row">
+	    <div class="col-md-4">
+		 <div class="events_1i1 clearfix position-relative">
+		  <div class="events_1i1i clearfix">
+		    <img src="img/22.jpg" alt="abc" class="w-100">
+		  </div>
+		  <div class="events_1i1i1 clearfix position-absolute bottom-0 text-center w-100">
+		    <h6 class="mb-0"><a class="button_1" href="#">Book Now </a></h6>
+		  </div>
+		 </div>
+		 <div class="events_1i2 clearfix p-3 pt-4 pb-4 bg-light">
+		  <h5 class="text-uppercase"><a href="#">Music Event in India</a></h5>
+		  <h6>Delhi &amp; Mumbai 
+			 <span class="col_red pull-right">
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star-o"></i>
+				</span>
+			 </h6>
+			 <hr>
+			 <h6 class="mb-0">June 09 - July 06 <span class="pull-right">09:00-13:00 pm</span></h6>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="events_1i1 clearfix position-relative">
+		  <div class="events_1i1i clearfix">
+		    <img src="img/23.jpg" alt="abc" class="w-100">
+		  </div>
+		  <div class="events_1i1i1 clearfix position-absolute bottom-0 text-center w-100">
+		    <h6 class="mb-0"><a class="button_1" href="#">Book Now </a></h6>
+		  </div>
+		 </div>
+		 <div class="events_1i2 clearfix p-3 pt-4 pb-4 bg-light">
+		  <h5 class="text-uppercase"><a href="#">Music Event in India</a></h5>
+		  <h6>Delhi &amp; Mumbai 
+			 <span class="col_red pull-right">
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star-o"></i>
+				</span>
+			 </h6>
+			 <hr>
+			 <h6 class="mb-0">June 09 - July 06 <span class="pull-right">09:00-13:00 pm</span></h6>
+		 </div>
+		</div>
+		<div class="col-md-4">
+		 <div class="events_1i1 clearfix position-relative">
+		  <div class="events_1i1i clearfix">
+		    <img src="img/24.jpg" alt="abc" class="w-100">
+		  </div>
+		  <div class="events_1i1i1 clearfix position-absolute bottom-0 text-center w-100">
+		    <h6 class="mb-0"><a class="button_1" href="#">Book Now </a></h6>
+		  </div>
+		 </div>
+		 <div class="events_1i2 clearfix p-3 pt-4 pb-4 bg-light">
+		  <h5 class="text-uppercase"><a href="#">Music Event in India</a></h5>
+		  <h6>Delhi &amp; Mumbai 
+			 <span class="col_red pull-right">
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star"></i>
+				 <i class="fa fa-star-o"></i>
+				</span>
+			 </h6>
+			 <hr>
+			 <h6 class="mb-0">June 09 - July 06 <span class="pull-right">09:00-13:00 pm</span></h6>
+		 </div>
+		</div>
+	   </div>
+    </div>
+  </div>
+</div>
+  </div>
+ </div>
+</section>
+
+<section id="subs" class="pt-5 pb-5 bg_red">
+ <div class="container-xl">
+   <div class="row subs_1">
+    <div class="col-md-4">
+	 <div class="subs_1l">
+	  <h4 class="text-white mb-0 mt-2">GET UPDATE SIGN UP NOW !</h4>
+	 </div>
+	</div>
+	<div class="col-md-8">
+	 <div class="subs_1r">
+	   <div class="input-group">
+				<input type="text" class="form-control bg-transparent" placeholder="Enter Your Email">
+				<span class="input-group-btn">
+					<button class="btn btn-primary bg-white col_red" type="button">
+						Submit </button>
+				</span>
+		</div>
+	 </div>
+	</div>
+   </div>
+ </div>
+</section>
+
+<section id="footer" class="p_3">
+ <div class="container-xl">
+   <div class="row footer_1">
+     <div class="col-md-2">
+	  <div class="footer_1i">
+	   <h6 class="text-white fw-bold">LANGUAGE MOVIES</h6>
+	   <hr class="line mb-4">
+	   <div class="row footer_1i_small">
+	   <h6 class="col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">English Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Tamil Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Punjabi Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Hindi Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Malyalam Movie</a></h6>
+	   <h6 class="mb-0 mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#"> Action Movie</a></h6>
+	   </div>
+	  </div>
+	 </div>
+	 <div class="col-md-4">
+	  <div class="footer_1i">
+	   <h6 class="text-white fw-bold">TAG CLOUD</h6>
+	   <hr class="line mb-4">
+	   <ul class="mb-0">
+	    <li class="d-inline-block"><a class="d-block" href="#">Analyze</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Audio</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Blog</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Business</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Creative</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Design</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Experiment</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">News</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Expertize</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Express</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Share</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Sustain</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Video</a></li>
+		<li class="d-inline-block"><a class="d-block" href="#">Youtube</a></li>
+	   </ul>
+	  </div>
+	 </div>
+	 <div class="col-md-2">
+	  <div class="footer_1i">
+	   <h6 class="text-white fw-bold">BY PRESENTER</h6>
+	   <hr class="line mb-4">
+	   <div class="row footer_1i_small">
+	   <h6 class="col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Action Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Romantic Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Other Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Comedy Movie</a></h6>
+	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Drama Movie</a></h6>
+	   <h6 class="mb-0 mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Classical Movie</a></h6>
+	   </div>
+	  
+	  </div>
+	 </div>
+	 <div class="col-md-4">
+	  <div class="footer_1i">
+	   <h6 class="text-white fw-bold">SUBSCRIPTION</h6>
+	   <hr class="line mb-4">
+	   <p class="text-muted">Subscribe your Email address for latest news & updates.</p>
+	   <input class="form-control bg-transparent" placeholder="Enter Email Address" type="text">
+	   <h6 class="mb-0 mt-4"><a class="button_1 pt-3 pb-3" href="#">Submit <i class="fa fa-check-circle ms-1"></i> </a></h6>
+	  </div>
+	 </div>
+   </div>
+ </div>
+</section>
+
+<section id="footer_b" class="pt-3 pb-3">
+ <div class="container-xl">
+   <div class="row footer_b1">
+   <div class="col-md-8">
+    <div class="footer_b1l">
+	 <p class="mb-0 fs-6 text-muted mt-1">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_red" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
+	</div>
+   </div>
+   <div class="col-md-4">
+    <div class="footer_b1r text-end">
+	  <ul class="social-network social-circle mb-0">
+					<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+					<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-pinterest"></i></a></li>
+					<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+					<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+				</ul>
+	</div>
+   </div>
+  </div>
+ </div>
+</section>
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var navbar_sticky = document.getElementById("navbar_sticky");
+var sticky = navbar_sticky.offsetTop;
+var navbar_height = document.querySelector('.navbar').offsetHeight;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky + navbar_height) {
+    navbar_sticky.classList.add("sticky")
+	document.body.style.paddingTop = navbar_height + 'px';
+  } else {
+    navbar_sticky.classList.remove("sticky");
+	document.body.style.paddingTop = '0'
+  }
+}
+</script>
+
+</body>
+
+</html>
