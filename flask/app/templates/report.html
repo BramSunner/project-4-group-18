@@ -30,7 +30,7 @@
     <!-- NAVBAR -->
     <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
-            <a class="navbar-brand" href="/"><img src="static/images/siteicon.png" alt="" class="img-fluid" style="max-width: 80px; max-height: 80px;"></a>
+            <a class="navbar-brand" href="/"><img src="static/images/MovieRecommender.png" alt="" class="img-fluid" style="max-width: 150px; max-height: 150px;"></a>
             <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
@@ -54,15 +54,42 @@
         </div>
     </nav>
 
-    <!-- Report -->
-    <div class="row">
-        <div class="col-md-12">
-            <div class="card bg-dark" style="margin: 10px;">
-                <div class = "card card-body">
-                    Hi there will be a report here soon
-                </div>
-            </div>
-        </div>
-     </div>
+<head>
+    <title>PDF in HTML</title>
+</head>
+<style>
+    .pdf {
+        width: 100%;
+        aspect-ratio: 4 / 3;
+    }
+
+    .pdf,
+    html,
+    body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1,
+    h3 {
+        text-align: center;
+    }
+
+    h1 {
+        color: #F5C518;
+    }
+</style>
+
+<body>
+
+    <h1>Project 4 Group 18 Report</h1>
+    <object class="pdf" 
+            data="static\images\Write-Up_ Project 4, Group 18.pdf" 
+            width="800" 
+            height="500">
+           <a href="static\images\Write-Up_ Project 4, Group 18.pdf">Download the PDF</a>.</p>
+    </object>
 </body>
+
 </html>

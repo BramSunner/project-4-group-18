@@ -108,3 +108,19 @@ table th {
 table td {
     border: 1px solid #000000;
 }
+
+body {
+    background-color: #070707; /* Change this color to your desired background color */
+}
+
+.navbar a {
+    color: #F5C518; /* Ensure links within the navbar also have the desired color */
+    font-size: 20px; /* Adjusts the font size */
+    font-family: 'Amazon Ember'; /* Adjusts the font family */
+}
+
+.pdf a {
+    color: #F5C518; /* Ensure links within the navbar also have the desired color */
+    font-size: 20px; /* Adjusts the font size */
+    font-family: 'Amazon Ember'; /* Adjusts the font family */
+}
