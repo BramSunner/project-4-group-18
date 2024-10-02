@@ -1,11 +1,9 @@
 from flask import Flask, render_template, redirect, request, jsonify
-from modelHelper import ModelHelper
+from recommender import recommend
 
 # Create an instance of Flask
 app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
-
-modelHelper = ModelHelper()
 
 # Route to render index.html template using data from Mongo
 @app.route("/")
@@ -28,13 +26,21 @@ def tableau():
     # Return template and data
     return render_template("tableau.html")
     
+@app.route("/recommendation")
+def recommendation():
+    return render_template("recommendation.html")
+
 @app.route("/makePredictions", methods=["POST"])
 def make_predictions():
     content = request.json["data"]
     print(content)
-    return(jsonify({"ok": True}))
 
-    # make this section lineup with what we have in the model helper
+
+    # Make the recommendation given the data.
+    result = recommend(content)
+
+    return(jsonify(result))
+
 
 
 #############################################################
