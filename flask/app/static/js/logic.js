@@ -2,7 +2,7 @@ $(document).ready(function() {
     console.log("Page Loaded");
 
     $("#filter").click(function() {
-        // alert("button clicked!");
+        alert("button clicked!");
         makePredictions();
     });
 });
@@ -10,16 +10,20 @@ $(document).ready(function() {
 
 // call Flask API endpoint
 function makePredictions() {
+    var list_length = $("#list_length").val();
     var title = $("#title").val();
     // var overview = $("#overview").val();
 
 
-    // check if inputs are valid
+    // Check if inputs are valid.
 
-    // create the payload
+    // Create the payload.
     var payload = {
-        "title": title,
-        // "overview": overview,
+        "list_length": list_length,
+        "movie": {
+            "name": title,
+            // "feature": overview
+        }
     }
 
     // Perform a POST request to the query URL
@@ -30,14 +34,28 @@ function makePredictions() {
         data: JSON.stringify({ "data": payload }),
         success: function(returnedData) {
             // Return as a recommendation list table.
-            // console.log(returnedData);
-            // var prob = parseFloat(returnedData["prediction"]);
+            console.log(returnedData);
 
-            // if (prob > 0.5) {
-            //     $("#output").text(`You Survived with probability ${prob}!`);
-            // } else {
-            //     $("#output").text(`You did not survive with probability ${prob}, sorry. :(`);
-            // }
+            // Make table.
+            var $table = $('<table>');
+
+            // Make table head.
+            $table.append('<caption></caption>')
+            .append('<thead>').children('thead')
+            .append('<tr />').children('tr').append('<th>Title</th><th>Rating</th>');
+
+            // Make table body.
+            var $tbody = $table.append('<tbody/>').children('tbody');
+
+            results = returnedData['results']
+            for (var i = 0; i < results.length; i++) {
+                $tbody.append('<tr/>').children('tr:last')
+                .append(`<td>${results[i]['title']}</td>`)
+                .append(`<td>${results[i]['rating']}</td>`)
+            }
+
+            // Add table to document.
+            $table.appendTo('#target');
 
         },
         error: function(XMLHttpRequest, textStatus, errorThrown) {

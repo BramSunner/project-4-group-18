@@ -12,6 +12,8 @@ from movie_processor import getMovie
 
 # Misc.
 from difflib import *
+import os
+os.chdir(os.path.dirname(os.path.realpath(__file__)))
 
 def recommend(list_length, movie_dict):
     '''
@@ -23,7 +25,7 @@ def recommend(list_length, movie_dict):
     '''
     
     # Load the dataset.
-    df = pd.read_csv("resources/ml_movie.csv", index_col = False)
+    df = pd.read_csv("static/resources/ml_movie.csv", index_col = False)
 
     # Find if using KEYWORDS or TITLE.
     if movie_dict['name'] == "KEYWORDS":

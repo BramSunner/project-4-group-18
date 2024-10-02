@@ -11,15 +11,15 @@ def home():
     # Return template and data
     return render_template("index.html")
 
-@app.route("/work_cited")
+@app.route("/works_cited")
 def work_cited():
     # Return template and data
-    return render_template("work_cited.html")
+    return render_template("works_cited.html")
 
-@app.route("/about")
+@app.route("/about_us")
 def about_us():
     # Return template and data
-    return render_template("about.html")
+    return render_template("about_us.html")
 
 @app.route("/tableau")
 def tableau():
@@ -33,19 +33,6 @@ def report():
 @app.route("/recommendation")
 def recommendation():
     return render_template("recommendation.html")
-
-@app.route("/makePredictions", methods=["POST"])
-def make_predictions():
-    content = request.json["data"]
-    print(content)
-
-
-    # Make the recommendation given the data.
-    result = recommend(content)
-
-    return(jsonify(result))
-
-
 
 #############################################################
 
@@ -61,6 +48,17 @@ def add_header(r):
     r.headers["Expires"] = "0"
     return r
 
-#main
+@app.route("/makePredictions", methods=["POST"])
+def make_predictions():
+    content = request.json["data"]
+    print(content)
+
+    # Make the recommendation given the data.
+    result = recommend(int(content['list_length']), content['movie'])
+    print(result)
+
+    return(jsonify(result))
+
+# Main.
 if __name__ == "__main__":
     app.run(debug=True)

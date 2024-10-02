@@ -1,543 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Entertain Pro</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet" >
-	<link href="css/font-awesome.min.css" rel="stylesheet" >
-	<link href="css/global.css" rel="stylesheet">
-	<link href="css/blog.css" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
-	<script src="js/bootstrap.bundle.min.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tableau</title>
 
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://bootswatch.com/5/lux/bootstrap.min.css", rel="stylesheet">
+    <link href="./static/css/static.css" rel="stylesheet">
+
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""/>
+    
+    <!-- Leaflet JavaScript code -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""></script>
+
+    <!-- JS IMPORTS - External Libraries -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body>
-<section id="header">
-<div id="signup-modal" class="modal fade" tabindex="-1" role="dialog" aria-hidden="true">
-			<div class="modal-dialog">
-				<div class="modal-content">
-				   <div class="modal-header">
-				<h5 class="modal-title" id="exampleModalLabel">SIGN UP</h5>
-				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-			  </div>
-					<div class="modal-body">
-						
-						<form class="ps-3 pe-3" action="#">
-							<div class="mb-3">
-								<label for="username" class="form-label">Name</label>
-								<input class="form-control" type="email" id="username" required="" placeholder="Eget Nulla">
-							</div>
-							 
-							<div class="mb-3">
-								<label for="emailaddress" class="form-label">Email address</label>
-								<input class="form-control" type="email" id="emailaddress" required="" placeholder="info@gmail.com">
-							</div>
-							 
-							<div class="mb-3">
-								<label for="password" class="form-label">Password</label>
-								<input class="form-control" type="password" required="" id="password" placeholder="Enter your password">
-							</div>
-							 
-							<div class="mb-3">
-								<div class="form-check">
-									<input type="checkbox" class="form-check-input" id="customCheck1">
-									<label class="form-check-label" for="customCheck1">I accept <a href="#">Terms and Conditions</a></label>
-								</div> 
-							</div>
-							 
-							<div class="mb-3 text-center">
-							 <h6><a class="button_1 d-block" href="#">LOG IN</a></h6>
-							</div>
-						 
-						</form>
-					 
-					</div>
-				</div><!-- /.modal-content -->
-			</div><!-- /.modal-dialog -->
-		</div>
-<nav class="navbar navbar-expand-md navbar-light" id="navbar_sticky">
-  <div class="container-fluid">
-    <a class="navbar-brand fs-4 p-0 fw-bold text-white text-uppercase" href="index.html"><i class="fa fa-video-camera me-1 col_light fs-1 align-middle"></i> Entertain Pro</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mb-0">
-	    
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.html">Home</a>
-        </li>
-		<li class="nav-item">
-          <a class="nav-link" href="about.html">About </a>
-        </li>
-		
-		<li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Blog
-          </a>
-          <ul class="dropdown-menu drop_1" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="blog.html"> Blog</a></li>
-            <li><a class="dropdown-item border-0" href="blog_detail.html"> Blog Detail</a></li>
-          </ul>
-        </li>
-		
-		<li class="nav-item">
-          <a class="nav-link" href="event.html">Events</a>
-        </li>
-		
-		<li class="nav-item">
-          <a class="nav-link" href="team.html">team</a>
-        </li>
-				
-		<li class="nav-item">
-          <a class="nav-link" href="contact.html">Contact</a>
-        </li>
-		
-      </ul>
-	  <ul class="navbar-nav mb-0 ms-auto">
-	    
-        <li class="nav-item">
-            <select name="categories" class="form-select bg-light" required="">
-			<option value="">All Categories</option>
-			<option>Movie</option>
-			<option>Video</option>
-			<option>Tv-Show</option>
-			<option>Music</option>
-			</select>
-			
-			<div class="input-group">
-				<input type="text" class="form-control border-start-0" placeholder="Search Movie">
-				<span class="input-group-btn">
-					<button class="btn btn-primary bg_yell" type="button">
-						<i class="fa fa-search"></i> </button>
-				</span>
-		</div>
-        </li>
-	
-		<li class="nav-item ms-3">
-          <a class="nav-link button" data-bs-toggle="modal" data-bs-target="#signup-modal" href="#">SIGN UP</a>
-        </li>
-		<!-- /.modal -->
-		
-      </ul>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="/"><img src="static/images/siteicon.png" alt="" class="img-fluid" style="max-width: 80px; max-height: 80px;"></a>
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="/tableau">Tableau</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/recommendation">Movie Recommender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about_us">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/report">Report</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/works_cited">Works Cited</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+
+
+    <div class='tableauPlaceholder' id='viz1727743166780' style='position: relative'>
+        <noscript>
+            <a href='#'>
+                <img alt='Box Office Bonanza! ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4Group18-Movies&#47;Story1&#47;1_rss.png' style='border: none' />
+            </a>
+        </noscript>
+        <object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+            <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='Project4Group18-Movies&#47;Story1' />
+            <param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Pr&#47;Project4Group18-Movies&#47;Story1&#47;1.png' />
+            <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' />
+            <param name='language' value='en-US' /></object>
     </div>
-  </div>
-</nav>
-</section>
+    <script type='text/javascript'>
+        var divElement = document.getElementById('viz1727743166780');                    
+        var vizElement = divElement.getElementsByTagName('object')[0];
 
-<section id="center" class="center_o pt-5">
- <div class="container">
-   <div class="row center_o1 text-center">
-    <div class="col-md-12">
-	  <h2>BLOG CATEGORIES</h2>
-	  <h5 class="bg_dark d-inline-block p-4 mb-0 mt-4 pt-2 pb-2 fw-normal col_red"><a class="text-white" href="#">Home</a>  <span class="me-2 ms-2 text-muted"> /</span>   Blog</h5>
-	</div>
-   </div>
-  </div>
-</section>
+        vizElement.style.width='100%';
+        vizElement.style.height='1000px';
 
-<section id="blog" class="p_3 bg-light">
- <div class="container">
-   <div class="row blog1">
-     <div class="col-md-9">
-	  <div class="blog1l">
-	   <div class="blog1l1 bg-white">
-	      <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="blog_detail.html"><img src="img/2.jpg" height="480" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-		  <div class="blog1l1i clearfix p-4">
-		   <h6 class="col_red">March 09, 2021 <span class="me-2 ms-2">|</span> by Admin</h6>
-		   <h4 class="mt-3"><a href="blog_detail.html">SIMPLICITY IS ABOUT SUBTRACTING THE OBVIOUS AND ADDING PART AREA OF THE MEANINGFUL</a></h4>
-		   <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit sequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet the mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-		   <h6 class="mb-0"><a class="button_1" href="blog_detail.html">Read More <i class="fa fa-long-arrow-right ms-1"></i></a></h6>
-		  </div>
-		  <div class="blog1l1i1 clearfix row m-0 p-3">
-		   <div class="col-md-9">
-		    <div class="blog1l1i1l">
-			 <ul class="mb-0">
-			  <li class="d-inline-block col_red me-3"><i class="fa fa-thumbs-up me-1"></i> <a href="blog_detail.html">1048 Likes</a></li>
-			   <li class="d-inline-block col_red me-3"><i class="fa fa-comments me-1"></i> <a href="blog_detail.html">348 Comments</a></li>
-			   <li class="d-inline-block col_red"><i class="fa fa-tags me-1"></i> <a href="blog_detail.html">Presenter Movie</a></li>
-			 </ul>
-			</div>
-		   </div>
-		   <div class="col-md-3">
-		    <div class="blog1l1i1r text-end">
-			  <ul class="mb-0">
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-facebook"></i></a></li>
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-youtube-play"></i></a></li>
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-linkedin"></i></a></li>
-			  <li class="d-inline-block"> <a href="blog_detail.html"><i class="fa fa-twitter"></i></a></li>
-			 </ul>
-			</div>
-		   </div>
-		  </div>
-	    </div>
-	   <div class="blog1l1 bg-white mt-4">
-	      <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="blog_detail.html"><img src="img/1.jpg" height="480" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-		  <div class="blog1l1i clearfix p-4">
-		   <h6 class="col_red">March 09, 2021 <span class="me-2 ms-2">|</span> by Admin</h6>
-		   <h4 class="mt-3"><a href="blog_detail.html">SIMPLICITY IS ABOUT SUBTRACTING THE OBVIOUS AND ADDING PART AREA OF THE MEANINGFUL</a></h4>
-		   <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit sequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet the mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-		   <h6 class="mb-0"><a class="button_1" href="blog_detail.html">Read More <i class="fa fa-long-arrow-right ms-1"></i></a></h6>
-		  </div>
-		  <div class="blog1l1i1 clearfix row m-0 p-3">
-		   <div class="col-md-9">
-		    <div class="blog1l1i1l">
-			 <ul class="mb-0">
-			  <li class="d-inline-block col_red me-3"><i class="fa fa-thumbs-up me-1"></i> <a href="blog_detail.html">1048 Likes</a></li>
-			   <li class="d-inline-block col_red me-3"><i class="fa fa-comments me-1"></i> <a href="blog_detail.html">348 Comments</a></li>
-			   <li class="d-inline-block col_red"><i class="fa fa-tags me-1"></i> <a href="blog_detail.html">Presenter Movie</a></li>
-			 </ul>
-			</div>
-		   </div>
-		   <div class="col-md-3">
-		    <div class="blog1l1i1r text-end">
-			  <ul class="mb-0">
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-facebook"></i></a></li>
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-youtube-play"></i></a></li>
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-linkedin"></i></a></li>
-			  <li class="d-inline-block"> <a href="blog_detail.html"><i class="fa fa-twitter"></i></a></li>
-			 </ul>
-			</div>
-		   </div>
-		  </div>
-	    </div>
-	   <div class="blog1l1 bg-white mt-3">
-	      <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="blog_detail.html"><img src="img/3.jpg" height="480" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-		  <div class="blog1l1i clearfix p-4">
-		   <h6 class="col_red">March 09, 2021 <span class="me-2 ms-2">|</span> by Admin</h6>
-		   <h4 class="mt-3"><a href="blog_detail.html">SIMPLICITY IS ABOUT SUBTRACTING THE OBVIOUS AND ADDING PART AREA OF THE MEANINGFUL</a></h4>
-		   <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor, nisi elit sequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet the mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio.</p>
-		   <h6 class="mb-0"><a class="button_1" href="blog_detail.html">Read More <i class="fa fa-long-arrow-right ms-1"></i></a></h6>
-		  </div>
-		  <div class="blog1l1i1 clearfix row m-0 p-3">
-		   <div class="col-md-9">
-		    <div class="blog1l1i1l">
-			 <ul class="mb-0">
-			  <li class="d-inline-block col_red me-3"><i class="fa fa-thumbs-up me-1"></i> <a href="blog_detail.html">1048 Likes</a></li>
-			   <li class="d-inline-block col_red me-3"><i class="fa fa-comments me-1"></i> <a href="blog_detail.html">348 Comments</a></li>
-			   <li class="d-inline-block col_red"><i class="fa fa-tags me-1"></i> <a href="blog_detail.html">Presenter Movie</a></li>
-			 </ul>
-			</div>
-		   </div>
-		   <div class="col-md-3">
-		    <div class="blog1l1i1r text-end">
-			  <ul class="mb-0">
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-facebook"></i></a></li>
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-youtube-play"></i></a></li>
-			  <li class="d-inline-block me-2"> <a href="blog_detail.html"><i class="fa fa-linkedin"></i></a></li>
-			  <li class="d-inline-block"> <a href="blog_detail.html"><i class="fa fa-twitter"></i></a></li>
-			 </ul>
-			</div>
-		   </div>
-		  </div>
-	    </div>
-	   <div class="pages mt-4  text-center">
-		 <div class="col-md-12">
-		   <ul class="mb-0">
-			<li><a href="blog_detail.html"><i class="fa fa-chevron-left"></i></a></li>
-			<li><a class="act" href="blog_detail.html">1</a></li>
-			<li><a href="blog_detail.html">2</a></li>
-			<li><a href="blog_detail.html">3</a></li>
-			<li><a href="blog_detail.html">4</a></li>
-			<li><a href="blog_detail.html">5</a></li>
-			<li><a href="blog_detail.html">6</a></li>
-			<li><a href="blog_detail.html"><i class="fa fa-chevron-right"></i></a></li>
-		   </ul>
-		 </div>
-	 </div>
-	  </div>
-	 </div>
-	 <div class="col-md-3">
-	  <div class="blog1r">
-	    <div class="blog1r1">
-	      <div class="input-group">
-				<input type="text" class="form-control" placeholder="Search Movie">
-				<span class="input-group-btn">
-					<button class="btn btn-primary bg_red border-0" type="button">
-						<i class="fa fa-search"></i></button>
-				</span>
-		</div>
-	     </div>
-		 <div class="blog1r2 shadow_box mt-4 p-3 bg-white">
-	      <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="blog_detail.html"><img src="img/19.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-		   <h5 class="mt-4">ABOUT PRESENTER</h5>
-	       <hr class="line mb-3">
-		   <p>Lorem ipsum dolor sit amet ue adipisicing elit, sed do eiuodor incididunt ut part.</p>
-		   <h6 class="mb-0"><a class="button_1" href="blog_detail.html">Read More <i class="fa fa-long-arrow-right ms-1"></i></a></h6>
-	     </div>
-		 <div class="blog1r2 shadow_box mt-4 p-3 bg-white">
-		   <h5>CATEGORY</h5>
-		   <hr class="line mb-3">
-	       <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">All</a> <a class="float-end" href="blog_detail.html">21,123</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">Action</a> <a class="float-end" href="blog_detail.html">616</a></h6>
-		   <hr class="mt-2 mb-2">
-		    <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">Romantic</a> <a class="float-end" href="blog_detail.html">515</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">Musical</a> <a class="float-end" href="blog_detail.html">434</a></h6>
-		   <hr class="mt-2 mb-2">
-		    <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">Love</a> <a class="float-end" href="blog_detail.html">363</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">Drama</a> <a class="float-end" href="blog_detail.html">456</a></h6>
-		   <hr class="mt-2 mb-2">
-		    <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">Thriller</a> <a class="float-end" href="blog_detail.html">546</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">Horror</a> <a class="float-end" href="blog_detail.html">563</a></h6>
-	     </div>
-		 <div class="blog1r2 shadow_box mt-4 p-3 bg-white">
-		   <h5>RECENT NEWS</h5>
-		   <hr class="line mb-3">
-	       <div class="blog1r2i row">
-		    <div class="col-md-4 col-4 pe-0">
-			 <div class="blog1r2il">
-			   <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="blog_detail.html"><img src="img/25.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-			 </div>
-			</div>
-			<div class="col-md-8 col-8">
-			 <div class="blog1r2il">
-			  <p class="mb-1 lh-1"><a href="blog_detail.html">Lorem spum menus.</a></p>
-			  <h6 class="mb-0 col_red">10 June 2022</h6>
-			 </div>
-			</div>
-		   </div><hr>
-		   <div class="blog1r2i row">
-		    <div class="col-md-4 col-4 pe-0">
-			 <div class="blog1r2il">
-			   <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="blog_detail.html"><img src="img/26.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-			 </div>
-			</div>
-			<div class="col-md-8 col-8">
-			 <div class="blog1r2il">
-			  <p class="mb-1 lh-1"><a href="blog_detail.html">Lorem spum menus.</a></p>
-			  <h6 class="mb-0 col_red">10 June 2022</h6>
-			 </div>
-			</div>
-		   </div><hr>
-		   <div class="blog1r2i row">
-		    <div class="col-md-4 col-4 pe-0">
-			 <div class="blog1r2il">
-			   <div class="grid clearfix">
-				  <figure class="effect-jazz mb-0">
-					<a href="blog_detail.html"><img src="img/27.jpg" class="w-100" alt="abc"></a>
-				  </figure>
-			  </div>
-			 </div>
-			</div>
-			<div class="col-md-8 col-8">
-			 <div class="blog1r2il">
-			  <p class="mb-1 lh-1"><a href="blog_detail.html">Lorem spum menus.</a></p>
-			  <h6 class="mb-0 col_red">10 June 2022</h6>
-			 </div>
-			</div>
-		   </div>
-	     </div>
-		 <div class="blog1r2 shadow_box mt-4 p-3 bg-white">
-		   <h5>ARCHIVES</h5>
-		   <hr class="line mb-3">
-	       <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2012</a> <a class="float-end" href="blog_detail.html">21,123</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2013</a> <a class="float-end" href="blog_detail.html">616</a></h6>
-		   <hr class="mt-2 mb-2">
-		    <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2013</a> <a class="float-end" href="blog_detail.html">515</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2014</a> <a class="float-end" href="blog_detail.html">434</a></h6>
-		   <hr class="mt-2 mb-2">
-		    <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2015</a> <a class="float-end" href="blog_detail.html">363</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2018</a> <a class="float-end" href="blog_detail.html">456</a></h6>
-		   <hr class="mt-2 mb-2">
-		    <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2020</a> <a class="float-end" href="blog_detail.html">546</a></h6>
-		   <hr class="mt-2 mb-2">
-		   <h6 class="mb-0"><i class="fa fa-caret-right col_red me-1"></i>  <a href="blog_detail.html">2021</a> <a class="float-end" href="blog_detail.html">563</a></h6>
-	     </div>
-		 <div class="blog1r2 shadow_box mt-4 p-3 bg-white">
-		   <h5>SUBSCRIBE</h5>
-		   <hr class="line mb-3">
-	       <input class="form-control bg-transparent" placeholder="Your Email id" type="text">
-		   <h6 class="mb-0 mt-3 text-center"><a class="button_1 d-block" href="blog_detail.html">Subscribe </a></h6>
-	     </div>
-		 <div class="blog1r2 shadow_box mt-4 p-3 bg-white">
-		   <h5>TAGS</h5>
-		   <hr class="line mb-3">
-	       <ul class="mb-0">
-	    <li class="d-inline-block"><a class="d-block" href="blog_detail.html">Analyze</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Audio</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Blog</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Business</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Creative</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Design</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Experiment</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">News</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Expertize</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Express</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Share</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Sustain</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Video</a></li>
-		<li class="d-inline-block"><a class="d-block" href="blog_detail.html">Youtube</a></li>
-	   </ul>
-	     </div>
-	  </div>
-	 </div>
-   </div>
-  </div>
-</section>
+        var scriptElement = document.createElement('script');    
 
-<section id="subs" class="pt-5 pb-5 bg_red">
- <div class="container-xl">
-   <div class="row subs_1">
-    <div class="col-md-4">
-	 <div class="subs_1l">
-	  <h4 class="text-white mb-0 mt-2">GET UPDATE SIGN UP NOW !</h4>
-	 </div>
-	</div>
-	<div class="col-md-8">
-	 <div class="subs_1r">
-	   <div class="input-group">
-				<input type="text" class="form-control bg-transparent" placeholder="Enter Your Email">
-				<span class="input-group-btn">
-					<button class="btn btn-primary bg-white col_red" type="button">
-						Submit </button>
-				</span>
-		</div>
-	 </div>
-	</div>
-   </div>
- </div>
-</section>
-
-<section id="footer" class="p_3">
- <div class="container-xl">
-   <div class="row footer_1">
-     <div class="col-md-2">
-	  <div class="footer_1i">
-	   <h6 class="text-white fw-bold">LANGUAGE MOVIES</h6>
-	   <hr class="line mb-4">
-	   <div class="row footer_1i_small">
-	   <h6 class="col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">English Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Tamil Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Punjabi Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Hindi Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Malyalam Movie</a></h6>
-	   <h6 class="mb-0 mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#"> Action Movie</a></h6>
-	   </div>
-	  </div>
-	 </div>
-	 <div class="col-md-4">
-	  <div class="footer_1i">
-	   <h6 class="text-white fw-bold">TAG CLOUD</h6>
-	   <hr class="line mb-4">
-	   <ul class="mb-0">
-	    <li class="d-inline-block"><a class="d-block" href="#">Analyze</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Audio</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Blog</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Business</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Creative</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Design</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Experiment</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">News</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Expertize</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Express</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Share</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Sustain</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Video</a></li>
-		<li class="d-inline-block"><a class="d-block" href="#">Youtube</a></li>
-	   </ul>
-	  </div>
-	 </div>
-	 <div class="col-md-2">
-	  <div class="footer_1i">
-	   <h6 class="text-white fw-bold">BY PRESENTER</h6>
-	   <hr class="line mb-4">
-	   <div class="row footer_1i_small">
-	   <h6 class="col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Action Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Romantic Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Other Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Comedy Movie</a></h6>
-	   <h6 class="mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Drama Movie</a></h6>
-	   <h6 class="mb-0 mt-2 col-md-12 col-6"><i class="fa fa-circle me-1 col_red font_10"></i> <a class="text-muted" href="#">Classical Movie</a></h6>
-	   </div>
-	  
-	  </div>
-	 </div>
-	 <div class="col-md-4">
-	  <div class="footer_1i">
-	   <h6 class="text-white fw-bold">SUBSCRIPTION</h6>
-	   <hr class="line mb-4">
-	   <p class="text-muted">Subscribe your Email address for latest news & updates.</p>
-	   <input class="form-control bg-transparent" placeholder="Enter Email Address" type="text">
-	   <h6 class="mb-0 mt-4"><a class="button_1 pt-3 pb-3" href="#">Submit <i class="fa fa-check-circle ms-1"></i> </a></h6>
-	  </div>
-	 </div>
-   </div>
- </div>
-</section>
-
-<section id="footer_b" class="pt-3 pb-3">
- <div class="container-xl">
-   <div class="row footer_b1">
-   <div class="col-md-8">
-    <div class="footer_b1l">
-	 <p class="mb-0 fs-6 text-muted mt-1">© 2013 Your Website Name. All Rights Reserved | Design by <a class="col_red" href="http://www.templateonweb.com">TemplateOnWeb</a></p>
-	</div>
-   </div>
-   <div class="col-md-4">
-    <div class="footer_b1r text-end">
-	  <ul class="social-network social-circle mb-0">
-					<li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
-					<li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-pinterest"></i></a></li>
-					<li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
-				</ul>
-	</div>
-   </div>
-  </div>
- </div>
-</section>
-
-<script>
-window.onscroll = function() {myFunction()};
-
-var navbar_sticky = document.getElementById("navbar_sticky");
-var sticky = navbar_sticky.offsetTop;
-var navbar_height = document.querySelector('.navbar').offsetHeight;
-
-function myFunction() {
-  if (window.pageYOffset >= sticky + navbar_height) {
-    navbar_sticky.classList.add("sticky")
-	document.body.style.paddingTop = navbar_height + 'px';
-  } else {
-    navbar_sticky.classList.remove("sticky");
-	document.body.style.paddingTop = '0'
-  }
-}
-</script>
-
+        scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    
+        vizElement.parentNode.insertBefore(scriptElement, vizElement);                
+    </script>
 </body>
-
 </html>
