@@ -1,0 +1,195 @@
+/*
+Template Name: Entertain Pro
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************event****************/
+.event1r ul li span{
+width:70px;
+height:70px;
+line-height:70px; 
+ }
+.event1r{
+border-radius:0px 10px 10px 0px; 
+ }
+ 
+.schedule_1 .nav-link {
+display: block;
+padding: 1.4rem 4rem;
+color: #333;
+background:#fafafa;
+border-radius:10px;
+border:none;
+margin-left:10px;
+margin-right:10px;
+font-size:18px; 
+}
+.schedule_1 .nav-link:hover {
+background:#ff4444;
+color:#fff; 
+ }
+.schedule_1 .nav-link.active{
+background:#ff4444;
+color:#fff; 
+ }
+.news_1rir{
+min-height:218px; 
+ }
+
+#team .events_1i1i1 ul{
+background:#ff4444;
+border-radius:10px 10px 0px 0px; 
+ }
+#team .events_1i1i1{
+display:none; 
+ }
+#team .events_1i1:hover .events_1i1i1{
+display:block; 
+ }
+#team .carousel-indicators {
+bottom: -50px;
+}
+#team .carousel-indicators [data-bs-target] {
+background-color: #ff4444;
+}
+
+.accordion-button{
+padding-top:25px;
+padding-bottom:25px;
+ }
+.accordion-button:focus{
+box-shadow:none;
+ }
+.accordion-button:not(.collapsed) {
+color:  #ff4444;!important;
+background-color:#fafafa;
+box-shadow: inset 0 -1px 0 #ff44441f; 
+font-weight:bold;
+}
+.accordion-item{
+border-color:#ff44441f; 
+ }
+.faq_1l .line{
+background-color: #fff; 
+ }
+.faq_1l .form-control{
+border-color: #f59696;
+color: #ddd;
+height:50px; 
+ }
+.faq_1l ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+color: #ddd;
+opacity: 1; /* Firefox */
+}
+.faq_1l .form_text {
+height: 180px;
+}
+.price_1i{
+box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%); 
+ }
+/*********************event_end****************/
+
+
+
+@media screen and (max-width : 767px){
+.about_1l h3{
+text-align:center; 
+ }
+.about_1l{
+margin-bottom:15px;
+ }
+#about .pe-0{
+padding-right:12px!important; 
+ }
+#about .ps-0{
+padding-left:12px!important; 
+ }
+.event1r ul li{
+margin-top:8px; 
+ }
+.schedule_1 .nav-link{
+ margin-bottom:8px;
+ }
+#schedule .pe-0{
+padding-right:12px!important; 
+ }
+#schedule .ps-0{
+padding-left:12px!important; 
+ }
+.events_1i2 {
+margin-bottom:15px; 
+ }
+.faq_1r{
+margin-top:15px;
+ }
+.faq_1r h3{
+text-align:center;
+ }
+.price_1i {
+margin-bottom:15px; 
+ }
+.news_1rir  h4{
+text-align:center; 
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+.news_1ril img{
+height:auto; 
+ }
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.about_1r img{
+min-height:440px; 
+ }
+.about_1l p{
+font-size:16px;
+ }
+.event1r ul li span {
+width: 50px;
+height: 50px;
+line-height: 50px;
+}
+.event1r  p{
+font-size:14px;
+}
+.event1r {
+min-height:440px; 
+}
+.event1l img{
+min-height:440px; 
+ }
+.news_1rir  p{
+font-size:16px; 
+ }
+#team .events_1i1i1 ul {
+padding:10px!important;
+}
+.events_1i2 h6{
+font-size:12px; 
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.about_1l p{
+font-size:16px;
+ }
+.event1r  p{
+font-size:15px;
+}
+.event1r {
+min-height:440px; 
+}
+.event1l img{
+min-height:440px; 
+ }
+ }
+@media (min-width:1201px) and (max-width:1255px) {
+
+ }
+
+

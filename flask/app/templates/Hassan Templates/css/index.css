@@ -1,0 +1,269 @@
+/*
+Template Name: Entertain Pro
+File: Layout CSS
+Author: TemplatesOnWeb
+Author URI: https://www.templateonweb.com/
+Licence: <a href="https://www.templateonweb.com/license">Website Template Licence</a>
+*/
+/*********************center_home****************/
+.carousel-caption{
+text-align:left;
+background:#0000005e;
+padding:30px 20px;
+bottom: 4rem;
+left: 50%;
+width:40%;
+color:#fff;
+ }
+.carousel-indicators{
+bottom:0; 
+ }
+/*********************center_home_end****************/
+
+/*********************upcome****************/
+.upcome_1 .nav-link {
+display: block;
+padding: 0.8rem 2rem;
+color: #333;
+background:#fff;
+border-radius:0;
+border:none;
+border-right:1px solid #ff44441f; 
+}
+.upcome_1 .nav-link:hover {
+background:#ff4444;
+color:#fff; 
+ }
+.upcome_1 .nav-link.active{
+background:#ff4444;
+color:#fff; 
+ }
+.upcome_2i1i1{
+padding-top:110px;
+display:none; 
+background:#0000005e;
+height:100%;
+ }
+.upcome_2i1:hover .upcome_2i1i1{
+display:block;
+ }
+
+.upcome_2i_lastir span a{
+display:inline-block; 
+border:1px solid #ff44441f;
+width:45px;
+height:45px;
+line-height:42px;
+text-align:center;
+ }
+.upcome_2i_lastir span:hover a{
+background:#ff4444;
+color:#fff;
+ }
+/*********************upcome_end****************/
+
+/*********************release****************/
+#release {
+background-image: url(../img/12.jpg);
+background-position: center;
+}
+.release_m{
+padding-top:100px;
+padding-bottom:100px;
+background:#0000005e; 
+ }
+.popular_m2 .play{
+font-size:100px;
+padding-top:130px; 
+ }
+.popular_m2 {
+background:#0000005e;
+height:100%;  
+ }
+/*********************release_end****************/
+
+/*********************trend****************/
+#trend {
+background-image: url(../img/2.jpg);
+background-position: center;
+}
+#trend .carousel-indicators{
+bottom:-50px; 
+ }
+/*********************trend_end****************/
+
+/*********************news****************/
+.news_1rir{
+box-shadow: 0px 1px 5px 0px rgb(0 0 0 / 10%);
+border-radius:0px 10px 10px 0px; 
+ }
+#news .popular_m2 .play{
+padding-top:210px; 
+ }
+/*********************news_end****************/
+
+/*********************gallery****************/
+.gallery_1lm2 span a{
+width:45px;
+height:45px;
+line-height:45px;
+border-radius:50%; 
+ }
+.gallery_1lm2{
+display:none;
+padding-top:55px;
+ }
+.gallery_1lm:hover .gallery_1lm2{
+display:block; 
+ }
+/*********************gallery_end****************/
+
+
+@media screen and (max-width : 767px){
+.carousel-caption{
+padding:10px;
+bottom:40px;
+left:0;
+width:100%;
+ }
+.center_home img{
+min-height:400px;
+ }
+.center_home p {
+font-size:14px;
+ }
+.center_home .button_1{
+padding:10px!important; 
+ }
+.center_home .button_2{
+padding:10px!important; 
+ }
+.upcome_1 .nav-link {
+margin-bottom:8px;
+}
+.upcome_2i_last {
+margin-bottom:15px; 
+ }
+.popular_m {
+margin-bottom:15px;  
+  }
+.popular_m2i  h6 {
+font-size:13px;
+}
+.popular_m2i  h2 {
+font-size:18px;
+}
+.popular_m2i  p {
+font-size:16px;
+}
+.news_1ri .pe-0{
+padding-right:12px!important; 
+ }
+.news_1ri .ps-0{
+padding-left:12px!important; 
+ }
+.events_1i2 {
+margin-bottom:15px; 
+ }
+#gallery .ps-0{
+padding-left:12px!important; 
+ }
+#gallery .pe-0{
+padding-right:12px!important; 
+ }
+.gallery_1m img{
+height:auto; 
+ }
+.gallery_1m{
+margin-top:15px;
+margin-bottom:15px;
+ }
+ }
+
+
+@media (min-width:576px) and (max-width:767px) {
+.upcome_2i1i1{
+padding-top:50%; 
+ }
+.news_1ril img{
+height:auto; 
+ }
+#gallery img{
+height:auto; 
+ }
+.gallery_1lm2{
+padding-top:40%; 
+ }
+
+ }
+@media (min-width:768px) and (max-width:991px) {
+.center_home img{
+min-height:600px;
+ }
+.carousel-caption{
+padding:30px 15px;
+left: 30%;
+width:60%;
+ }
+.upcome_2i1i img{
+min-height:330px; 
+ }
+.upcome_2i1i1  .button_1{
+padding:10px!important;
+ }
+.upcome_2i1i1  .button_2{
+padding:10px!important;
+ }
+.upcome_2i_lastir span a {
+width: 30px;
+height: 30px;
+line-height: 28px;
+}
+.upcome_2i_lastil h5{
+font-size:16px; 
+ }
+.upcome_2i_lastil h6{
+font-size:14px; 
+ }
+.popular_m2i  h2 {
+font-size:24px;
+}
+.popular_m2i  p {
+font-size:16px;
+}
+.news_1rir  p{
+font-size:14px; 
+ }
+.news_1rir  h4{
+font-size:16px!important; 
+ }
+.news_1rir  h6{
+font-size:13px; 
+ }
+.news_1rir  {
+min-height:251px; 
+ }
+.events_1i2 h6{
+font-size:13px;  
+ }
+ }
+
+@media (min-width:992px) and (max-width:1200px) {
+.center_home img{
+min-height:600px;
+ }
+.carousel-caption{
+padding:30px 15px;
+left: 30%;
+width:60%;
+ }
+.upcome_2i1i img{
+min-height:330px; 
+ }
+
+ }
+@media (min-width:1201px) and (max-width:1255px) {
+
+ }
+
+
