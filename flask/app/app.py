@@ -16,16 +16,20 @@ def work_cited():
     # Return template and data
     return render_template("work_cited.html")
 
-@app.route("/about_us")
+@app.route("/about")
 def about_us():
     # Return template and data
-    return render_template("about_us.html")
+    return render_template("about.html")
 
 @app.route("/tableau")
 def tableau():
     # Return template and data
     return render_template("tableau.html")
     
+@app.route("/report")
+def report():
+    return render_template("report.html")
+
 @app.route("/recommendation")
 def recommendation():
     return render_template("recommendation.html")
