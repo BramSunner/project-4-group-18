@@ -1,98 +1,14 @@
-#map {
-    height: 74vh;
-    margin-left: 2vh;
-    margin-right: 2vh;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
-}
-
-.leaflet-popup-content-wrapper {
-    height: 550px;
-    width: 550px;
-    text-align: center;
-}
-
 .bio {
     margin-left: 20px; /* Adjust the value to move content further or closer to the right */
   }
 
-/* Buttons */
-
-.update-button {
-    border-width: .5px;
-    border-radius: 20px;
-    background-color: transparent;
+label {
+    display: flex;
+    align-items: center;
 }
 
-/* Filters. */
-
-#filter-menu {
-    width: fit-content;
-    position: sticky;
-    top: 0;
-    left: 0;
-}
-
-#filter-menu-header {
-    position:sticky;
-    top:0;
-    left:0;
-    text-align: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
-}
-
-#filter-menu-header-relief {
-    margin-top: 0px;
-}
-
-.filter-item {
-    max-width: 15.6vh;
-    min-width: fit-content;
-
-    padding-left: 20px;
-    padding-right: 10px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-
-    position: sticky;
-    top:0;
-    left:0;
-}
-
-.filter-sel {
-    max-width: 10vh;
-    min-width: 10vh;
-    max-height: 20px;
-}
-
-.filter-inp {
-    max-height: 20px;
-}
-
-/* Charts */
-
-.chart-container {
-    min-width: 80vh;
-}
-
-#line-chart {
-    min-width: 80vh;
-}
-
-#donut-chart {
-    min-width: 80vh;
-}
-
-
-/* Table */
-
-table {
-    border: 1px solid #000000;
-}
-
-table th {
-    text-align: center;
+a {
+    color: #F5C518;
 }
 
 /* Home */
@@ -115,12 +31,12 @@ body {
 
 .navbar a {
     color: #F5C518; /* Ensure links within the navbar also have the desired color */
-    font-size: 18px; /* Adjusts the font size */
-    font-family: 'Impact'; /* Adjusts the font family */
+    font-size: 20px; /* Adjusts the font size */
+    font-family: 'Amazon Ember'; /* Adjusts the font family */
 }
 
 .pdf a {
     color: #F5C518; /* Ensure links within the navbar also have the desired color */
-    font-size: 18px; /* Adjusts the font size */
-    font-family: 'Impact'; /* Adjusts the font family */
+    font-size: 20px; /* Adjusts the font size */
+    font-family: 'Amazon Ember'; /* Adjusts the font family */
 }

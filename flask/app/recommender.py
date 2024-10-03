@@ -28,20 +28,24 @@ def recommend(list_length, movie_dict):
     df = pd.read_csv("static/resources/ml_movie.csv", index_col = False)
 
     # Find if using KEYWORDS or TITLE.
-    if movie_dict['name'] == "KEYWORDS":
+    if movie_dict['title'] == "KEYWORDS":
+        # False rating.
+        movie_dict['rating'] = 0
+
         df_n = pd.DataFrame(
             movie_dict,
-            columns = ['title', 'feature'],
+            columns = ['title', 'rating', 'feature'],
             index = [0]
         )
 
         df = pd.concat([df, df_n]).reset_index(drop = True)
 
-    elif get_close_matches(movie_dict['name'], df.title.tolist(), cutoff = .7):
-        movie_dict['name'] = get_close_matches(movie_dict['name'], df.title.tolist(), cutoff = .7)[0]
+    elif get_close_matches(movie_dict['title'], df.title.tolist(), cutoff = .7):
+        movie_dict['title'] = get_close_matches(movie_dict['title'], df.title.tolist(), cutoff = .7)[0]
     
     else:
-        movie_dict = getMovie(movie_dict['name'])
+        movie_dict = getMovie(movie_dict['title'])
+
         df_n = pd.DataFrame(
             movie_dict,
             columns = ['title', 'rating', 'feature'],
@@ -61,7 +65,7 @@ def recommend(list_length, movie_dict):
     cos_sim = cosine_similarity(tfidf_matrix)
 
     # Get the index of the target movie.
-    movie_id = df.loc[df['title'] == movie_dict['name'], :].index[0]
+    movie_id = df.loc[(df['title'] == movie_dict['title']), :].index[0]
 
     # Get a list of the cosine similarity scores for target movie.
     score = list(enumerate(cos_sim[movie_id]))
@@ -70,7 +74,7 @@ def recommend(list_length, movie_dict):
     sorted_score = sorted(score, key = lambda x: x[1], reverse = True)
 
     # Return the information for use with the site.
-    # Response will be structured as:
+    # Response will be structured as: a
     # results = 
     # {
     #     "target": 

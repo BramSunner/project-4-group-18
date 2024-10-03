@@ -53,24 +53,30 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-12">
-                <div class="card bg-secondary border-dark" style="padding: 20px; margin: 10px; min-height: 20vh;">
+            <div class="d-xl-flex justify-content-center">
+                <div class="card bg-primary border-warning text-white" style="padding: 20px; margin: 10px; min-height: 20vh;">
                     <div class="card-header">
                         <h2 style="text-align: center;">Find A Movie!</h2>
                     </div>
                     <div class="card-body">
-                        <label for="title">Title of Movie</label>
-                        <input type="text" id="title" name="title"><br><br>
-                        
-                        <!-- <label for="overview">Keywords of Movie</label>
-                        <input type="text" id="overview" name="overview"><br><br> -->
-
-                        <label for="list_length">Number of Recommendations</label>
-                        <input type="number" id="list_length" name="list_length" min="10" max="30" value="10"/>
-                        
+                        <div class="row">
+                            <div class="d-md-flex justify-content-center">
+                                <label for="title">Title</label>
+                                <input type="text" id="title" name="title" style="margin: 10px;">
+                                
+                                <label for="overview">Keywords</label>
+                                <input type="text" id="overview" name="overview" style="margin: 10px;">
+        
+                                <label for="list_length">Number of Recommendations</label>
+                                <input type="number" id="list_length" name="list_length" style="margin: 10px;" min="10" max="30" value="10"/>
+                            </div>
+                        </div>
                         <br>
-
-                        <button type="button" id="filter" class="btn btn-primary">Find Some Movies!</button>
+                        <div class="row">
+                            <div class="d-md-flex justify-content-center">
+                                <button type="button" id="filter" class="btn btn-warning">Find Some Movies!</button>
+                            </div>
+                        </div>
                     </div>
                     <div class="card-footer">
                         If there isn't a specific movie that you want recommendations from, type "KEYWORDS" into the title and then write some keywords about the type of movie you'd like to watch.
@@ -79,16 +85,7 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-12">
-                <div class="card bg-secondary border-dark" style="padding: 10px; margin: 10px;">
-                    <div class="card-header">
-                        <h2 style="text-align: center;">Results</h2>
-                    </div>
-                    <div class="card-body">
-                        <div id="target">
-                        </div>
-                    </div>
-                </div>
+            <div id="target" class="d-xl-flex justify-content-center">
             </div>
         </div>
     </div>

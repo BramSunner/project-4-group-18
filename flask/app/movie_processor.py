@@ -18,8 +18,17 @@ def requestMovie(movie_name):
     Make a request to The Movie Database API with a given movie name.
     Get the movie ID number from TMDB and then make a second request for more information.
     Returns a dictionary containing movie title, overview, director, and up to 4 cast members.
+    If errors occur: a default return of the movie Forrest Gump is given.
     https://www.themoviedb.org
     '''
+    default = {
+        "title": "Forrest Gump",
+        "rating": 8.8,
+        "genre": ["Drama", "Romance"],
+        "director": "Robert Zemeckis",
+        "cast": ["Tom Hanks", "Robin Wright", "Gary Sinise", "Sally Field"],
+        "overview": "The presidencies of Kennedy and Johnson, the events of Vietnam, Watergate and other historical events unfold through the perspective of an Alabama man with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.",
+    }
 
     # Make the first request for the movie ID.
     url = f"https://api.themoviedb.org/3/search/movie?query={movie_name}&include_adult=false&language=en-US&page=1"
@@ -42,8 +51,8 @@ def requestMovie(movie_name):
         movie_id = data.get('results', {})[0].get('id', -1)
 
     except IndexError as e:
-        print("Index does not exist. Request cancelled.")
-        return
+        print("Index does not exist. Returning default.")
+        return default
     
     # Make the second request for the needed information.
     url = f"https://api.themoviedb.org/3/movie/{movie_id}?append_to_response=credits&language=en-US"
@@ -58,7 +67,7 @@ def requestMovie(movie_name):
 
     if response.status_code != 200:
         print(f"Request with code {response.status_code} was unsuccessful. Cancelling...")
-        return
+        return default
 
     else:
         data = response.json()
@@ -77,7 +86,24 @@ def requestMovie(movie_name):
 
 def getMovie(movie_name):
     # Create DataFrame to run processes on with data from movie request.
-    df = pd.DataFrame(requestMovie(movie_name), index = [0])
+    movie_dict = requestMovie(movie_name)
+
+    # Process data to match our DataFrame requirements.
+    for i in range(1, 5):
+        try:
+            movie_dict[f'cast{i}'] = movie_dict['cast'][i-1]
+
+        except KeyError as e:
+            movie_dict[f'cast{i}'] = ''
+    
+    movie_dict['genre'] = ", ".join(movie_dict['genre'])
+    movie_dict.pop('cast', None)
+
+    df = pd.DataFrame(
+        movie_dict,
+        columns = ['title', 'rating', 'genre', 'director', 'cast1', 'cast2', 'cast3', 'cast4', 'overview'],
+        index = [0]
+    )
 
     # Run the processing steps on the new data.
     df['genre'] = df.genre.apply(lambda x: x.replace("Sci-Fi", "Science Fiction"))
@@ -86,4 +112,4 @@ def getMovie(movie_name):
     df = df[['title', 'rating', 'feature']]
 
     # Return the new data as a dictionary.
-    return df.to_dict(orient = 'records')
+    return df.to_dict(orient = 'records')[0]
