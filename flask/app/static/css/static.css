@@ -115,12 +115,12 @@ body {
 
 .navbar a {
     color: #F5C518; /* Ensure links within the navbar also have the desired color */
-    font-size: 20px; /* Adjusts the font size */
-    font-family: 'Amazon Ember'; /* Adjusts the font family */
+    font-size: 18px; /* Adjusts the font size */
+    font-family: 'Impact'; /* Adjusts the font family */
 }
 
 .pdf a {
     color: #F5C518; /* Ensure links within the navbar also have the desired color */
-    font-size: 20px; /* Adjusts the font size */
-    font-family: 'Amazon Ember'; /* Adjusts the font family */
+    font-size: 18px; /* Adjusts the font size */
+    font-family: 'Impact'; /* Adjusts the font family */
 }
